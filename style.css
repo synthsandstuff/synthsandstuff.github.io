@@ -1,1 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap');
 
+html,
+body {
+    height: 100%;
+    font-family: 'Recursive', sans-serif;
+}
