@@ -45,7 +45,7 @@
     background-color: whitesmoke;
 }
 .outer5{
-    background-image: url('/pics/a1157343705_16.jpeg');
+    background-image: url("/pics/Goombario.jpeg");
     width: 400px;
     height: 400px;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
     background-color: whitesmoke;
 }
 .outer6{
-    background-image: url('/pics/avatars-goP9FqysJmSFcx6B-eD2KBA-t500x500.jpeg');
+    background-image: url("/pics/BadPic.jpeg");
     width: 400px;
     height: 400px;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
     background-color: whitesmoke;
 }
 .outer7{
-    background-image: url("/pics/artworks-QHH5Iyln1lqsYm0G-hSEzrw-t500x500.jpeg");
+    background-image: url("/pics/Ice.jpeg");
     width: 400px;
     height: 400px;
     background-repeat: no-repeat;
@@ -87,9 +87,22 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.vidclass{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .viditem{
-    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-content: center;
     padding-bottom: 10px;
+}
+.vidcontent{
+    display:flex;
+    flex-wrap: wrap;
+    width: 560px;
 }
 a{
     color: inherit;
