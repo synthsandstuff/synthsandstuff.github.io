@@ -133,3 +133,13 @@ body {
     color: #FFB8D1;
     text-align: center;
 }
+ul {
+    list-style: none;
+}
+.menuitem {
+    display: inline-block;
+}
+.menuitem:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+}
