@@ -114,8 +114,8 @@
 }
 
 .songitem{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .vidclass{
@@ -156,12 +156,24 @@ body {
     text-align: center;
 }
 
+.main-nav{
+    width: 100%;
+    display: block;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    overflow: auto;
+}
+
 ul {
     list-style: none;
 }
 
 .menuitem {
     display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 2vh;
 }
 
 .menuitem:hover {
