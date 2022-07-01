@@ -16,9 +16,10 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    z-index: 1;
 }
 
 .outer2{
@@ -28,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -40,7 +41,7 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -52,7 +53,7 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -64,9 +65,10 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    z-index: 1;
 }
 
 .outer6{
@@ -76,9 +78,10 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    z-index: 1;
 }
 
 .outer7{
@@ -88,9 +91,10 @@
     background-repeat: no-repeat;
     background-size: 480px 480px;
     opacity:1;
-    background-color: whitesmoke;
+    background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    z-index: 1;
 }
 
 .outer1:hover,.outer2:hover,.outer3:hover,.outer4:hover,.outer5:hover,.outer6:hover,.outer7:hover{
@@ -101,6 +105,7 @@
     width:100%;
     height:100%;
     opacity: 0;
+    z-index: 2;
 }
 
 .inner:hover{
@@ -193,6 +198,7 @@ ul {
     font-size: 0.51vw;
     line-height: 1;
     margin: 1;
+    color: #8DE5EF;
 }
 
 .foreground{
