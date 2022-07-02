@@ -170,6 +170,21 @@ body {
     overflow: auto;
 }
 
+header{
+    align-self: left;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    background-color: #3B364E;
+    z-index: 3;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #8DE5EF;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -187,7 +202,11 @@ ul {
 }
 
 .stage{
-    position: relative
+    position: absolute;
+    top: 10%;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .background{
@@ -195,10 +214,11 @@ ul {
     z-index: 1; 
     background-size: 100%;
     opacity: 0.5;
-    font-size: 0.51vw;
+    font-size: 0.55vw;
     line-height: 1;
-    margin: 1;
     color: #8DE5EF;
+    align-self: center;
+    align-content: center;
 }
 
 .foreground{
