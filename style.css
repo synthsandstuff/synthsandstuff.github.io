@@ -20,6 +20,7 @@
     padding-left: 5px;
     padding-right: 5px;
     z-index: 1;
+    transition: 0.5s;
 }
 
 .outer2{
@@ -32,6 +33,7 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    transition: 0.5s;
 }
 
 .outer3{
@@ -44,6 +46,7 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    transition: 0.5s;
 }
 
 .outer4{
@@ -56,6 +59,7 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
+    transition: 0.5s;
 }
 
 .outer5{
@@ -68,7 +72,8 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
-    z-index: 1;
+    z-index: 2;
+    transition: 0.5s;
 }
 
 .outer6{
@@ -81,7 +86,8 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
-    z-index: 1;
+    z-index: 2;
+    transition: 0.5s;
 }
 
 .outer7{
@@ -94,11 +100,13 @@
     background-color: #8DE5EF;
     padding-left: 5px;
     padding-right: 5px;
-    z-index: 1;
+    z-index: 2;
+    transition: 0.5s;
 }
 
 .outer1:hover,.outer2:hover,.outer3:hover,.outer4:hover,.outer5:hover,.outer6:hover,.outer7:hover{
     opacity:0.5;
+    transition: 0.5s;
 }
 
 .inner{
@@ -146,11 +154,6 @@
 a{
     color: inherit;
     text-decoration: inherit;
-    align-self: center;
-}
-
-div{
-    display:block;
 }
 
 body {
@@ -161,49 +164,56 @@ body {
     text-align: center;
 }
 
-.main-nav{
-    width: 100%;
-    display: block;
-    left: 0;
-    top: 100%;
-    position: absolute;
-    overflow: auto;
-}
-
-header{
-    align-self: left;
+.mainnav {
+    list-style: none;
     position: fixed;
     top: 0;
     width: 99%;
     background-color: #3B364E;
+    overflow: hidden;
     z-index: 3;
     border-style: solid;
     border-width: 2px;
     border-color: #8DE5EF;
     border-left: 0;
     border-right: 0;
-    border-top: 0;
+    margin: 0;
+    padding: 0;
 }
 
-ul {
-    list-style: none;
+.navli {
+    float: left;
 }
 
-.menuitem {
-    display: inline-block;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 2vh;
+li a {
+    text-align: center;
+    display: block;
+    border-right: 1px solid #8DE5EF;
+    text-decoration: none;
+    padding: 2vh 5vw 2vh 5vw;
+    transition: 0.5s;
 }
 
-.menuitem:hover {
-    text-decoration: underline;
-    opacity: 0.5;
+li a:hover{
+    background-color: #8DE5EF;
+    color: #3B364E;
+}
+
+hr {
+    width: 99%;
 }
 
 .stage{
     position: absolute;
-    top: 10%;
+    top: 6vh;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.blogstage{
+    position: absolute;
+    top: 0;
     left: 0;
     margin: 0;
     padding: 0;
@@ -224,4 +234,9 @@ ul {
 .foreground{
     position: relative; 
     z-index: 2;
+}
+
+.infolist {
+    list-style: none;
+    line-height: 3vh;
 }
