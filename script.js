@@ -89,6 +89,8 @@ function flowLines(grid)
 
 var id = setInterval(drawFrame,50);
 
+var id2 = setInterval
+
 function drawFrame()
 {
   var el = document.getElementsByClassName('background')[0];
