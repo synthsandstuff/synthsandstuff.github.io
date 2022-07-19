@@ -1,4 +1,4 @@
-var box = document.querySelector(".foreground");
+var box = document.getElementsByClassName("foreground")[0];
 
 var rows = Math.round(box.clientHeight/6);
 var columns = Math.round(box.clientWidth/5.95);
@@ -87,13 +87,11 @@ function flowLines(grid)
   return grid;
 }
 
-var id = setInterval(drawFrame,50);
-
-var id2 = setInterval
+setInterval(drawFrame,50);
 
 function drawFrame()
 {
-  var el = document.getElementsByClassName('background')[0];
+  var el = document.getElementsByClassName("background")[0];
   grid = flowLines(grid);
   el.textContent = convertAscii(grid);
   grid = createLines(grid);
