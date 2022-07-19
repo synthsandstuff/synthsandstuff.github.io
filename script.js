@@ -1,56 +1,98 @@
-const Ascii_Chars = [' ', '.', '~', '^', '+', '=', ':', ';', '/', '0', '&', '#'];
-
 var box = document.querySelector(".foreground");
-let height = box.clientHeight;
-let width = box.clientWidth;
 
-function random3DUnitVector()
+var rows = Math.round(box.clientHeight/6);
+var columns = Math.round(box.clientWidth/5.95);
+
+var genFactor = Math.round(columns*0.1);
+var lifeTime = 0.7;
+var strLength = 0.95;
+
+var Ascii_Chars =[' ', '.', "'", '`', '^','"' , ',', ':', ';', '!', '>', '<', '~', '+', '_', '-', '?', ']', '[', '}', '{', ')', '(', '|', '\\', '/', '*', '#', '&', '8', '%' , '@', '$'];
+
+var ascii_number = Ascii_Chars.length;
+
+var grid = createGrid();
+
+function boolArray(lengthReq)
 {
-    let theta = Math.random() * 2 * Math.PI;
-    let phi = (Math.random() * Math.PI) - 1;
-    return {x: Math.cos(theta)*Math.cos(phi), 
-            y: Math.cos(theta)*Math.sin(phi),
-            z: Math.sin(theta)};
+  var boolArray = []
+  for(var i = 0; i < lengthReq; i++)
+  {
+    boolArray.push(true);
+  }
+  return boolArray;
 }
 
-function generate3DUnitVectorArray()
+function createGrid()
 {
-    let vectorUnitArray = [];
-    let heightinChars = Math.floor(height/6);
-    for(let k = 0; k < 60; k++)
+  var grid = []
+  for(var i = 0; i < rows; i++)
+  {
+    var column = []
+    for(var j = 0; j < columns; j++)
     {
-        let grid = [];
-        for(let j = 0; j < heightinChars; j++)
-        {
-            let row = [];
-            for(let i = 0; i < 300; i++)
-            {
-                row.push(random3DUnitVector());
-            }
-            grid.push(row);
-        }
-        vectorUnitArray.push(grid);
+      column.push(0);
     }
-    return vectorUnitArray;
+    grid.push(column)
+  }
+  return grid;
 }
 
-function generatePerlinNoise(x,y)
+function createLines(grid)
 {
-    var x0 = Math.floor(x);
-    var x1 = x0 + 1;
-    var y0 = Math.floor(y);
-    var y1 = y0 + 1; 
-
-    var sx = x - x0;
-    var sy = y - y0;
+  for(var i = 0; i < Math.floor(Math.random()*genFactor); i++)
+  {
+    grid[0][Math.floor(Math.random()*rows)] = Math.floor(Math.random()*ascii_number);
+  }
+  return grid
 }
 
-function dot_prod_grid(x, y, vert_x, vert_y){
-    var g_vect = gradients[vert_y][vert_x];
-    var d_vect = {x: x - vert_x, y: y - vert_y};
-    return d_vect.x * g_vect.x + d_vect.y * g_vect.y;
+function convertAscii(grid)
+{
+  var asciiGrid = "";
+  for(var i = 0; i < rows; i++)
+  {
+    for(var j = 0; j < columns; j++)
+    {
+      asciiGrid += Ascii_Chars[grid[i][j]];
+    }
+    asciiGrid += "\n";
+  }
+  return asciiGrid;
 }
 
-function lin_interp(x, a, b){
-    return a + x * (b-a);
+function flowLines(grid)
+{
+  var firstInCol = boolArray(columns);
+  for(var i = rows-1; i > 0; i--)
+  {
+    for(var j = 0; j < columns; j++)
+    {
+      if(i-1>=0)
+      {
+        if(grid[i-1][j] !== 0 && firstInCol[j])
+        {
+          grid[i-1][j] = Math.floor(lifeTime*grid[i-1][j])
+          firstInCol[j] = false;
+        }
+        if(grid[i-1][j] === 0 && !firstInCol[j])
+        {
+          firstInCol[j] = true;
+        }
+        grid[i][j] = grid[i-1][j];
+        grid[i-1][j] = Math.floor(strLength*grid[i-i][j]);
+      }
+    }
+  }
+  return grid;
+}
+
+var id = setInterval(drawFrame,50);
+
+function drawFrame()
+{
+  var el = document.getElementsByClassName('background')[0];
+  grid = flowLines(grid);
+  el.textContent = convertAscii(grid);
+  grid = createLines(grid);
 }
