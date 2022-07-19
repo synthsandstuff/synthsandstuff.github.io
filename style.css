@@ -173,7 +173,8 @@ body {
     list-style: none;
     position: fixed;
     top: 0;
-    width: 99%;
+    left: 0;
+    width: 100%;
     background-color: #3B364E;
     overflow: hidden;
     z-index: 3;
@@ -184,10 +185,13 @@ body {
     border-right: 0;
     margin: 0;
     padding: 0;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.navli {
-    float: left;
+.navli{
+    flex-grow: 4;
 }
 
 li a {
