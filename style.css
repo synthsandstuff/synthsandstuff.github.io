@@ -9,115 +9,64 @@ html{
 }
 
 .descrp{
-    padding:0;
+    margin: 0;
+}
+
+.outer{
+    width: 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity:1;
+    background-color: #8DE5EF;
+    transition: 0.5s;
+    margin: 0;
 }
 
 .outer1{
     background-image: url("https://i.scdn.co/image/ab6761610000f178d5fbdbb302e8f9e3a5e433c5");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 1;
-    transition: 0.5s;
 }
 
 .outer2{
     background-image: url("https://static.wixstatic.com/media/f1cf04_7477d4e60126461bb1ee6cb1aa43c390~mv2.jpg/v1/crop/x_3,y_0,w_900,h_1000/fill/w_576,h_640,al_c,q_85,usm_0.66_1.00_0.01/GraphicDesignCat_edited_edited.webp");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    transition: 0.5s;
 }
 
 .outer3{
     background-image: url("https://static.wixstatic.com/media/f1cf04_7477d4e60126461bb1ee6cb1aa43c390~mv2.jpg/v1/crop/x_3,y_0,w_900,h_1000/fill/w_576,h_640,al_c,q_85,usm_0.66_1.00_0.01/GraphicDesignCat_edited_edited.webp");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    transition: 0.5s;
 }
 
 .outer4{
     background-image: url("https://static.wixstatic.com/media/f1cf04_7477d4e60126461bb1ee6cb1aa43c390~mv2.jpg/v1/crop/x_3,y_0,w_900,h_1000/fill/w_576,h_640,al_c,q_85,usm_0.66_1.00_0.01/GraphicDesignCat_edited_edited.webp");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    transition: 0.5s;
 }
 
 .outer5{
     background-image: url("/pics/Goombario.jpeg");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 2;
-    transition: 0.5s;
 }
 
 .outer6{
     background-image: url("/pics/BadPic.jpeg");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 2;
-    transition: 0.5s;
 }
 
 .outer7{
     background-image: url("/pics/Ice.jpeg");
-    width: 350px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity:1;
-    background-color: #8DE5EF;
-    padding-left: 5px;
-    padding-right: 5px;
-    z-index: 2;
-    transition: 0.5s;
 }
 
-.outer1:hover,.outer2:hover,.outer3:hover,.outer4:hover,.outer5:hover,.outer6:hover,.outer7:hover{
+.outer:hover {
     opacity:0.5;
     transition: 0.5s;
 }
 
 .inner{
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     z-index: 2;
-    padding: 0;
+    padding: -5px -5px -5px -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    margin: 0;
 }
 
 .inner:hover{
@@ -131,8 +80,8 @@ html{
 }
 
 .songitem{
-    padding-left: 1%;
-    padding-right: 1%;
+    margin: 5px 5px 5px 5px;
+    padding: 0;
 }
 
 .vidclass{
@@ -232,8 +181,8 @@ hr {
     position: fixed; 
     z-index: 1; 
     background-size: 100%;
-    opacity: 0.5;
-    font-size: 0.55vw;
+    opacity: 0.3;
+    font-size: 50%;
     line-height: 1;
     color: #8DE5EF;
     align-self: center;

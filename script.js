@@ -1,17 +1,60 @@
-var box = document.getElementsByClassName("foreground")[0];
-
-var rows = Math.round(box.clientHeight/6);
-var columns = Math.round(box.clientWidth/5.95);
-
-var genFactor = Math.round(columns*0.1);
 var lifeTime = 0.7;
 var strLength = 0.95;
 
 var Ascii_Chars =[' ', '.', "'", '`', '^','"' , ',', ':', ';', '!', '>', '<', '~', '+', '_', '-', '?', ']', '[', '}', '{', ')', '(', '|', '\\', '/', '*', '#', '&', '8', '%' , '@', '$'];
-
 var ascii_number = Ascii_Chars.length;
 
-var grid = createGrid();
+var grid = [];
+var rows = 0;
+var columns = 0;
+var genFactor = 25;
+
+function resizeGrid()
+{
+  var new_box = document.getElementsByClassName("foreground")[0];
+  var new_rows = Math.round(new_box.clientHeight/6);
+  var new_columns = Math.round(new_box.clientWidth/5);
+  var new_genFactor = Math.round(new_columns*0.1);
+  if(columns>new_columns)
+  {
+    for(var i = 0; i < rows; i++)
+    {
+      for(var j = 0; j < columns-new_columns; j++)
+      {
+        grid[i].pop();
+      }
+    }
+  }
+  else if(new_columns>columns)
+  {
+    for(var i = 0; i < rows; i++)
+    {
+      for(var j = 0; j < new_columns-columns; j++)
+      {
+        grid[i].push(0);
+      }
+    }
+  }
+  if(rows>new_rows)
+  {
+    for(var i = 0; i < rows-new_rows; i++)
+    {
+      grid.pop();
+    }
+  }
+  else if(new_rows>rows)
+  {
+    for(var i = 0; i < new_rows-rows; i++)
+    {
+      var new_row = [];
+      for(var j = 0; j < new_columns; j++)
+      {
+        new_row.push(0);
+      }
+      grid.push(new_row);
+    }
+  }
+}
 
 function boolArray(lengthReq)
 {
@@ -87,12 +130,19 @@ function flowLines(grid)
   return grid;
 }
 
-setInterval(drawFrame,50);
-
 function drawFrame()
 {
   var el = document.getElementsByClassName("background")[0];
   grid = flowLines(grid);
   el.textContent = convertAscii(grid);
   grid = createLines(grid);
+}
+
+function startMatrixRain()
+{
+  var box = document.getElementsByClassName("foreground")[0];
+  rows = Math.round(box.clientHeight/6);
+  columns = Math.round(box.clientWidth/5);
+  grid = createGrid();
+  setInterval(drawFrame,50);
 }
