@@ -9,6 +9,57 @@ var rows = 0;
 var columns = 0;
 var genFactor = 25;
 
+var lastkeys = []
+
+document.addEventListener('keydown', function(event)
+{
+  if(event.defaultPrevented)
+  {
+    return;
+  }
+  switch(event.key)
+  {
+    case "ArrowUp":
+      lastkeys.push(1);
+      console.log("up")
+      break;
+    case "ArrowDown":
+      lastkeys.push(2);
+      console.log("down")
+      break;
+    case "ArrowLeft":
+      lastkeys.push(3);
+      console.log("left");
+      break;
+    case "ArrowRight":
+      lastkeys.push(4);
+      console.log("right");
+      break;
+    default:
+      return;
+  }
+  if(lastkeys.length>8)
+  {
+    lastkeys.length = 8;
+  }
+  if(lastkeys.length==8)
+  {
+    console.log(lastkeys);
+    var konami = 0;
+    for(var i = 0; i < 8; i++)
+    {
+      if(lastkeys[i]==Math.floor(i/2)+1)
+      {
+        konami++;
+      }
+    }
+    if(konami==8)
+    {
+      window.location.href = "http://www.w3schools.com"; //Change to be webbased gameboy emulator when done
+    }
+  }
+})
+
 function resizeGrid()
 {
   var new_box = document.getElementsByClassName("foreground")[0];
