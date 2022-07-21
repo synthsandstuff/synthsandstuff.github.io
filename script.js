@@ -9,7 +9,8 @@ var rows = 0;
 var columns = 0;
 var genFactor = 25;
 
-var lastkeys = []
+var konamikeys = []
+var rollkeys = []
 
 document.addEventListener('keydown', function(event)
 {
@@ -20,30 +21,60 @@ document.addEventListener('keydown', function(event)
   switch(event.key)
   {
     case "ArrowUp":
-      lastkeys.push(1);
+      konamikeys.push(1);
       break;
     case "ArrowDown":
-      lastkeys.push(2);
+      konamikeys.push(2);
       break;
     case "ArrowLeft":
-      lastkeys.push(3);
+      konamikeys.push(3);
       break;
     case "ArrowRight":
-      lastkeys.push(4);
+      konamikeys.push(4);
+      break;
+    case "r":
+      rollkeys.push('R');
+      break;
+    case "R":
+      rollkeys.push('R');
+      break;
+    case "o":
+      rollkeys.push('O');
+      break;
+    case "O":
+      rollkeys.push('O');
+      break;
+    case "l":
+      rollkeys.push('L');
+      break;
+    case "L":
+      rollkeys.push('L');
       break;
     default:
       return;
   }
-  if(lastkeys.length>8)
+  if(rollkeys.length>4)
   {
-    lastkeys.shift();
+    rollkeys.shift();
   }
-  if(lastkeys.length==8)
+  if(konamikeys.length>8)
+  {
+    konamikeys.shift();
+  }
+  if(rollkeys.length==4)
+  {
+    console.log(rollkeys);
+    if(rollkeys[0]=="R" && rollkeys[1]=="O" && rollkeys[2]=="L" && rollkeys[3]=="L")
+    {
+      window.location.href = "https://youtu.be/dQw4w9WgXcQ";
+    }
+  }
+  if(konamikeys.length==8)
   {
     var konami = 0;
     for(var i = 0; i < 8; i++)
     {
-      if(lastkeys[i]==Math.floor(i/2)+1)
+      if(konamikeys[i]==Math.floor(i/2)+1)
       {
         konami++;
       }
@@ -53,7 +84,7 @@ document.addEventListener('keydown', function(event)
       window.location.href = "http://www.w3schools.com"; //Change to be webbased gameboy emulator when done
     }
   }
-})
+});
 
 function resizeGrid()
 {
