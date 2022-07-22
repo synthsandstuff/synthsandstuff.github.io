@@ -7,7 +7,7 @@ var ascii_number = Ascii_Chars.length;
 var grid = [];
 var rows = 0;
 var columns = 0;
-var genFactor = 25;
+var genFactor = 30;
 
 var konamikeys = []
 var rollkeys = []
