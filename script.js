@@ -81,7 +81,7 @@ document.addEventListener('keydown', function(event)
     }
     if(konami==8)
     {
-      window.location.href = "http://www.w3schools.com"; //Change to be webbased gameboy emulator when done
+      window.location.href = "./gamingterminal.html"; //Change to be webbased gameboy emulator when done
     }
   }
 });
