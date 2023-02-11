@@ -132,6 +132,7 @@ body {
     left: 0;
     width: 100%;
     background-color: #3B364E;
+    box-shadow: 0px 5px 20px rgba(141, 229, 239, 0.25);
     overflow: hidden;
     z-index: 4;
     border-style: solid;
@@ -156,7 +157,7 @@ li a {
     border-right: 0.5px solid #8DE5EF;
     border-left: 0.5px solid #8DE5EF;
     text-decoration: none;
-    padding: 2vh 5vw 2vh 5vw;
+    padding: 2vh 2vw 2vh 2vw;
     transition: 0.5s;
 }
 
@@ -167,6 +168,8 @@ li a:hover{
 
 hr {
     width: 99%;
+    border-color: #8DE5EF;
+    box-shadow: 0px 0px 10px rgba(141, 229, 239, 1);
 }
 
 .stage{
