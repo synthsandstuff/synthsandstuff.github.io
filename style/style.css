@@ -12,6 +12,11 @@ html{
     margin: 0;
 }
 
+.audioitem{
+    padding-bottom: 1%;
+    padding-top: 0;
+}
+
 .outer{
     width: 350px;
     height: 350px;
@@ -90,7 +95,7 @@ html{
 .songitem{
     margin: 20px 20px 20px 20px;
     padding: 0;
-    box-shadow: 5px 5px 0px rgba(255, 184, 209, 0.25);
+    box-shadow: 10px 10px 0px rgba(255, 184, 209, 0.25);
 }
 
 .vidclass{
@@ -116,13 +121,14 @@ html{
     display: flex;
     flex-wrap: wrap;
     width: 99%;
-    height: 60%;
+    height: 75%;
     clear: both;
     justify-content: center;
+    margin-top: 0%;
 }
 
 .itemleft{
-    min-width: 560px;
+    min-width: 50%;
     max-width: 50%;
     margin-right: 2%;
 }
@@ -142,8 +148,8 @@ html{
 }
 
 .itemright{
-    min-width: 560px;
-    max-width: 50%;
+    min-width: 30%;
+    max-width: 40%;
 }
 
 iframe{
@@ -219,7 +225,7 @@ hr {
 }
 
 .small-hr{
-    width: 60%
+    width: 60%;
 }
 
 .stage{
