@@ -218,8 +218,12 @@ function drawFrame()
 function startMatrixRain()
 {
   var box = document.getElementsByClassName("foreground")[0];
+  console.log(box.clientHeight);
+  console.log(box.clientWidth);
   rows = Math.round(box.clientHeight/6);
   columns = Math.round(box.clientWidth/5);
+  console.log(rows);
+  console.log(columns);
   grid = createGrid();
   setInterval(drawFrame,50);
 }
