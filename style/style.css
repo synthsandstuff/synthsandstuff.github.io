@@ -61,15 +61,15 @@ html{
 }
 
 .outer5{
-    background-image: url("/pics/Goombario.jpeg");
+    background-image: url("https://f4.bcbits.com/img/a1157343705_16.jpg");
 }
 
 .outer6{
-    background-image: url("/pics/BadPic.jpeg");
+    background-image: url("https://i1.sndcdn.com/avatars-PyVBkYMVpH3PV7FI-JNonUg-t500x500.jpg");
 }
 
 .outer7{
-    background-image: url("/pics/Ice.jpeg");
+    background-image: url("https://i1.sndcdn.com/artworks-QHH5Iyln1lqsYm0G-hSEzrw-t500x500.jpg");
 }
 
 .outer8{
@@ -168,7 +168,7 @@ html{
 }
 
 iframe{
-    box-shadow: 5px 5px 0px rgba(141, 229, 239, 0.25);
+    box-shadow: 10px 10px 0px rgba(141, 229, 239, 0.25);
 }
 
 a{
