@@ -80,6 +80,10 @@ html{
     background-image: url("https://f4.bcbits.com/img/a3715314088_16.jpg");
 }
 
+.outer11{
+    background-image: url("https://i1.sndcdn.com/artworks-Er46FecnybrVZLyu-xmOhsA-t500x500.jpg");
+}
+
 .outer:hover {
     opacity:0.5;
     transition: 0.5s;
