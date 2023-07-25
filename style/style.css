@@ -84,6 +84,14 @@ html{
     background-image: url("https://i1.sndcdn.com/artworks-Er46FecnybrVZLyu-xmOhsA-t500x500.jpg");
 }
 
+.outer12{
+    background-image: url("https://i1.sndcdn.com/artworks-8cZguyzwEW6SWmzG-XtMkgw-t500x500.jpg");
+}
+
+.outer13{
+    background-image: url("https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F5626532--CD111AF0-941A-48F0-BED6F80463236369--0--2492033--PXL202307122356507992.jpg?fm=jpg&q=75&w=800&s=f5f6f9fed342029726582991e0b06651");
+}
+
 .outer:hover {
     opacity:0.5;
     transition: 0.5s;
