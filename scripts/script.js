@@ -90,7 +90,8 @@ function resizeGrid()
 {
   var new_box = document.getElementsByClassName("foreground")[0];
   var new_rows = Math.round(new_box.clientHeight/6);
-  var new_columns = Math.round(new_box.clientWidth/5);
+  var new_width = document.getElementsByTagName("nav")[0];
+  var new_columns = Math.ceil(new_width.clientWidth/5);
   var new_genFactor = Math.round(new_columns*0.1);
   if(columns>new_columns)
   {
@@ -99,6 +100,7 @@ function resizeGrid()
       for(var j = 0; j < columns-new_columns; j++)
       {
         grid[i].pop();
+        columns = columns - 1;
       }
     }
   }
@@ -109,6 +111,7 @@ function resizeGrid()
       for(var j = 0; j < new_columns-columns; j++)
       {
         grid[i].push(0);
+        columns = columns + 1;
       }
     }
   }
@@ -117,6 +120,7 @@ function resizeGrid()
     for(var i = 0; i < rows-new_rows; i++)
     {
       grid.pop();
+      rows = rows - 1;
     }
   }
   else if(new_rows>rows)
@@ -127,6 +131,7 @@ function resizeGrid()
       for(var j = 0; j < new_columns; j++)
       {
         new_row.push(0);
+        rows = rows + 1;
       }
       grid.push(new_row);
     }
@@ -218,10 +223,11 @@ function drawFrame()
 function startMatrixRain()
 {
   var box = document.getElementsByClassName("foreground")[0];
+  var box2 = document.getElementsByTagName("nav")[0];
   console.log(box.clientHeight);
-  console.log(box.clientWidth);
+  console.log(box2.clientWidth);
   rows = Math.round(box.clientHeight/6);
-  columns = Math.round(box.clientWidth/5);
+  columns = Math.ceil(box2.clientWidth/5);
   console.log(rows);
   console.log(columns);
   grid = createGrid();
